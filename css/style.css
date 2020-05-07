@@ -3,12 +3,15 @@
 #logo{
     /* width: 10.625rem;
     height: 5.625rem;
-    display: inline-table; */
-    position: absolute;
+    display: inline-table; */    
     width: 170px;
     height: 90.8px;
-    left: 81px;
-    top: 122px;
+    margin: auto;
+    display: block;
+    margin-top: 7.4375rem;
+}
+.content .form{
+    margin-top: ;
 }
 
 /* --- --- */
