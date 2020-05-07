@@ -4,11 +4,23 @@
     /* width: 10.625rem;
     height: 5.625rem;
     display: inline-table; */
-    position: absolute;
+
     width: 170px;
     height: 90.8px;
-    left: 81px;
-    top: 122px;
+    margin: auto;
+    margin-top: 10rem;
+    margin-bottom: 2rem;
 }
+.row{
+    margin:1rem auto;
+}
+.img{
+    margin: auto;
+}
+
+.btn{
+    margin:1rem;
+}
+
 
 /* --- --- */
