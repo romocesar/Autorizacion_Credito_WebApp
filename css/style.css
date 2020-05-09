@@ -3,13 +3,42 @@
 #logo{
     /* width: 10.625rem;
     height: 5.625rem;
-    display: inline-table; */    
+    display: inline-table; */
+
     width: 170px;
     height: 90.8px;
     margin: auto;
-    display: block;
-    margin-top: 7.4375rem;
+    margin-top: 8rem;
+    margin-bottom: 2rem;
 }
 
+#verify{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+#pass-change{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#report{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.row{
+    margin:1rem auto;
+}
+.img{
+    margin: auto;
+}
+
+.btn{
+    
+    margin: 0 auto;
+    text-align: center;
+}
 
 /* --- --- */
