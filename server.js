@@ -12,7 +12,7 @@ var PORT = process.env.PORT || 9000;
 var app = express();
 
 // set our application port
-app.listen('PORT');
+app.set('port',PORT);
 
 // set morgan to log info about our requests for development use.
 app.use(morgan('dev'));
