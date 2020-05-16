@@ -2,11 +2,10 @@ var Sequelize = require('sequelize');
 var bcrypt = require('bcrypt');
 	
 // create a sequelize instance with our local postgres database information.
-const sequelize = new Sequelize('my_DB', 'root', 'Xacn#1855', {
-	host:'localhost',
+const sequelize = new Sequelize('r8uuqfh5bjtkypxw', 'n43jp8wpwb0od8os', 'yfpqvbycpkqr795k', {
+	host:'pqxt96p7ysz6rn1f.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
 	port: 3306,
     dialect:'mysql',
-    user: 'root',
 	pool:{
 		max: 5,
 		min: 0,
