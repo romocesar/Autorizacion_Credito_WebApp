@@ -7,12 +7,12 @@ var User = require('./models/user');
 var hbs = require('express-handlebars'); 
 var path = require('path'); 
 var PORTs = process.env.PORT || 9000;
-console.log(PORTs);
+console.log(PORT);
 // invoke an instance of express application.
 var app = express();
 
 // set our application port
-app.set('port',PORTs);
+app.set('port',PORT);
 
 // set morgan to log info about our requests for development use.
 app.use(morgan('dev'));
