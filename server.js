@@ -6,13 +6,13 @@ var morgan = require('morgan');
 var User = require('./models/user');
 var hbs = require('express-handlebars'); 
 var path = require('path'); 
-var PORT = process.env.PORT || 9000;
-console.log(PORT);
+var PORTs = process.env.PORT || 9000;
+console.log(PORTs);
 // invoke an instance of express application.
 var app = express();
 
 // set our application port
-app.set('port',PORT);
+app.set('port',PORTs);
 
 // set morgan to log info about our requests for development use.
 app.use(morgan('dev'));
