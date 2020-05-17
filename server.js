@@ -7,7 +7,7 @@ var User = require('./models/user');
 var hbs = require('express-handlebars'); 
 var path = require('path'); 
 var PORT = process.env.PORT || 9000;
-
+console.log(PORT);
 // invoke an instance of express application.
 var app = express();
 

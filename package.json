@@ -1,14 +1,14 @@
 {
   "name": "sessionnodejs",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm start"
+    "start": "node server.js"
   },
   "engines": {
-    "npm": "6.13.4"
+    "npm": "6.13.4",
+    "node": "12.11.1"
   },
   "keywords": [],
   "author": "",
@@ -25,5 +25,15 @@
     "mysql2": "^1.6.1",
     "pg": "^7.4.3",
     "sequelize": "^4.38.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/romocesar/Autorizacion_Credito_WebApp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/romocesar/Autorizacion_Credito_WebApp/issues"
+  },
+  "homepage": "https://github.com/romocesar/Autorizacion_Credito_WebApp#readme",
+  "description": ""
 }
