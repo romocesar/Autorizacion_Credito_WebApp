@@ -35,7 +35,9 @@ class Login extends React.Component {
     return (
       <Row className='justify-content-center'>
         <Col xs='10'>
-          <h1 className='text-center display-3 text-capitalize'>Welcome {this.state.username ? this.state.username : 'User'}</h1>
+          <img style={{ display: 'block',margin:'auto',height:'10rem'}}
+          src='https://drive.google.com/uc?export=view&id=1P_32JglBGkWho8Z1EpjkY6Tdgj_71Omf'></img>
+          <h1 className='text-center text-capitalize'>Welcome {this.state.username ? this.state.username : 'User'}</h1>
           <Form disabled={!this.isValidInput()} onSubmit={e => this.handleSubmit(e)} className='text-center border p-3'>
             <Form.Row className='justify-content-center'>
               <Form.Group controlId='loginUsername'>

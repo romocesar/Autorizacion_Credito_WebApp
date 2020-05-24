@@ -15,7 +15,7 @@ const TopNavbar = () => (
       <Navbar expand='md' bg='dark' variant='dark'>
         <Navbar.Toggle aria-controls='responsive-top-navbar' />
         <Navbar.Collapse id='responsive-top-navbar'>
-          <Navbar.Brand>MERN Passport MySQL</Navbar.Brand>
+          <Navbar.Brand>Autorizacion de créditos</Navbar.Brand>
           <Nav>
             <NavLink exact to='/' className='nav-link' activeClassName='active'>
               Dashboard

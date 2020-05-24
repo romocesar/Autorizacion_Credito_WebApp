@@ -27,7 +27,7 @@ export default class AdminDashboard extends React.Component {
     return (
       <UserContext.Consumer>
         { ({ user}) => (
-          <Row className="text-center text-white">
+          <Row className="text-center ">
             <Col xs="12">
               <h1 className="display-4"> Welcome Administrator </h1>
               <h2>{ user.username} User-ID: { user.user_id}</h2>
