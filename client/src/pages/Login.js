@@ -51,7 +51,7 @@ class Login extends React.Component {
                 <Form.Control size='lg' onChange={this.handleInputChange} autoComplete='current-password' type='password' name='password' placeholder='Password' />
               </Form.Group>
             </Form.Row>
-            <Button disabled={!this.isValidInput()} className='w-75 mx-auto mb-2' type='submit' size='block' variant='success'>
+            <Button disabled={!this.isValidInput()} className='w-25 mx-auto mb-2' type='submit' size='block' variant='success'>
               Login
             </Button>
           </Form>
