@@ -1,5 +1,6 @@
 /* --- Login.html ---*/
 
+
 #logo{
     /* width: 10.625rem;
     height: 5.625rem;
@@ -32,6 +33,7 @@
     margin:1rem auto;
 }
 .img{
+    height: 10rem;
     margin: auto;
 }
 

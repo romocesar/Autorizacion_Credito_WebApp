@@ -140,7 +140,7 @@ app.get('/logout', (req, res) => {
         res.redirect('/login');
     }
 });
-
+app.use(express.static("public"));
 
 // route for handling 404 requests(unavailable routes)
 app.use(function (req, res, next) {
