@@ -23,6 +23,7 @@ export default class ViewAllClients extends React.Component {
             </tr>
           </thead>
           <tbody>
+            {console.log(this.state.clients)}
             {this.state.clients.map(client => (
                 <tr key={client.id}>
                   <td>{client.client_name}</td>

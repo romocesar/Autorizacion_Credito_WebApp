@@ -66,5 +66,14 @@ export default {
     } catch (err) {
       return console.log(err)
     }
+  },
+  getAllClients: async () => {
+    try {
+      const res = await axios.get('/api/clients')
+      console.log(res)
+      return res.data
+    } catch (err) {
+      return console.log(err)
+    }
   }
 }

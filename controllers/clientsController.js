@@ -28,6 +28,7 @@ module.exports = {
   getAllClients: (req, res) => {
     console.log(req.isAuthenticated())
     db.Clients.selectAll(data => {
+      console.log(data);
       res.status(200).json(data)
     })
   },
@@ -59,12 +60,6 @@ module.exports = {
   deleteUserById: (req, res) => {
     console.log(req.isAuthenticated())
     db.User.deleteOne(req.params.id, data => {
-      res.status(200).json(data)
-    })
-  },
-  getAllClients: (req, res) => {
-    console.log(req.isAuthenticated())
-    db.User.selectAll(data => {
       res.status(200).json(data)
     })
   }
