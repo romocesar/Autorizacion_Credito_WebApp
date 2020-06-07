@@ -3,8 +3,14 @@ import RenderIfAId from '../components/RenderIfAId'
 import UserContext from '../UserContext'
 import Buscador from '../components/Buscador'
 import ViewAllUsers from '../components/ViewAllUsers';
+import ViewAllClients from '../components/ViewAllClients';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 export default class Dashboard extends React.Component {
+
   render () {
+
     return (
   
       <UserContext.Consumer>
@@ -12,12 +18,12 @@ export default class Dashboard extends React.Component {
           <div className='text-center'>
             <h1 className='display-5' style={{margin: '2rem'}}>Welcome {user.username}</h1>
             <Buscador></Buscador>
+            <ViewAllClients/>
           </div>
-        )}
-           
-      </UserContext.Consumer>
-          
 
+        )}
+
+      </UserContext.Consumer>
     )
   }
 }
