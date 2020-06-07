@@ -13,16 +13,16 @@ const Buscador = () => (
 
 
     <form>
-        <div className="row">
-        <div className="col-1">
-            <Button>
-            <i class="fa fa-search" aria-hidden="true"></i>
-            </Button>
+        <div className=" row justify-content-md-center">
+          <div className='col-1'>
+          <Button>
+          <i class="fa fa-search" aria-hidden="true"></i>
+          </Button>
           </div>
-          <div class="col-4">
-            <input type="text" className="form-control" placeholder="Buscar cliente"/>
+          <div className='col-3'>
+          <input type="text" className="form-control" placeholder="Buscar cliente"/>
           </div>
-        </div>
+          </div>
     </form>
 
 )

@@ -25,9 +25,9 @@ module.exports = {
       res.status(400)
     }
   },
-  getAllUsers: (req, res) => {
+  getAllClients: (req, res) => {
     console.log(req.isAuthenticated())
-    db.User.selectAll(data => {
+    db.Clients.selectAll(data => {
       res.status(200).json(data)
     })
   },

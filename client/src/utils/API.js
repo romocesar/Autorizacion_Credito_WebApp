@@ -57,5 +57,14 @@ export default {
     } catch (err) {
       return console.log(err)
     }
+  },
+  getInforme: async () => {
+    try {
+      const res = await axios.get('/api/informe')
+      console.log(res)
+      return res.data
+    } catch (err) {
+      return console.log(err)
+    }
   }
 }

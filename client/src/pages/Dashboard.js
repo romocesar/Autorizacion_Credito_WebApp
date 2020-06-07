@@ -2,22 +2,21 @@ import React from 'react'
 import RenderIfAId from '../components/RenderIfAId'
 import UserContext from '../UserContext'
 import Buscador from '../components/Buscador'
-
+import ViewAllUsers from '../components/ViewAllUsers';
 export default class Dashboard extends React.Component {
   render () {
     return (
+  
       <UserContext.Consumer>
         {({ user }) => (
-          <div className='text-center '>
-            <h1 className='display-4'>Welcome {user.username}</h1>
+          <div className='text-center'>
+            <h1 className='display-5' style={{margin: '2rem'}}>Welcome {user.username}</h1>
             <Buscador></Buscador>
-           
-
-            
           </div>
-          
         )}
+           
       </UserContext.Consumer>
+          
 
     )
   }

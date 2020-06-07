@@ -6,6 +6,7 @@ import Col from 'react-bootstrap/Col';
 import UserContext from '../UserContext';
 import CreateUser from '../components/CreateUser';
 import ViewAllUsers from '../components/ViewAllUsers';
+import ViewAllClients from '../components/ViewAllClients';
 
 export default class AdminDashboard extends React.Component {
   state = {
@@ -47,7 +48,7 @@ export default class AdminDashboard extends React.Component {
               </ButtonGroup>
               {/* Currently buttons and form not functional, Buttons will not work with current setup testing front end connection to server. */}
               { createNewUser ? <CreateUser toggleCreateComponent={this.toggleCreateUser} /> : null} 
-              { viewUsers ? <ViewAllUsers toggleViewComponent={this.toggleViewUsers} /> : null} 
+              { viewUsers ? <ViewAllClients toggleViewComponent={this.toggleViewUsers} /> : null} 
             </Col>
           </Row>
         )
