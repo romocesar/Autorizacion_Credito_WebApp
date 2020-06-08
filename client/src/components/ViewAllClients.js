@@ -3,12 +3,12 @@ import Row from 'react-bootstrap/Row';
 import Table from 'react-bootstrap/Table'
 import API from '../utils/API';
 
-export default class ViewAllClients extends React.Component {
+export default class ViewAllUsers extends React.Component {
   state = {
-    clients:[]
+    users:[]
   }
   componentDidMount(){
-    API.getAllClients().then((res) => this.setState({ clients: res}));
+    API.getClientBySearch('ars').then((res) => this.setState({ users: res}));
   }
   render(){
     return (
@@ -23,8 +23,7 @@ export default class ViewAllClients extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {console.log(this.state.clients)}
-            {this.state.clients.map(client => (
+            {this.state.users.map(client => (
                 <tr key={client.id}>
                   <td>{client.client_name}</td>
                   <td>{client.second_name}</td>

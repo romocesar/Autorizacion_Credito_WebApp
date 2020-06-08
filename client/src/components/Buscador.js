@@ -8,10 +8,29 @@ import Button from 'react-bootstrap/Button'
 import Badge from 'react-bootstrap/Badge'
 import UserContext from '../UserContext'
 import RenderIfAId from './RenderIfAId'
+import API from '../utils/API';
+import ViewAllClients from '../components/ViewAllClients';
 
-const Buscador = () => (
+export default class Buscador extends React.Component {
+    state = {
+        buscador:[],
+        title: "",
+        toResults: false,
+        results: []
+      }
 
 
+      handleInputChange = event => {
+        const { name, value } = event.target;
+        this.setState({
+          [name]: value
+        });
+        console.log(value)
+      };
+
+      render(){
+        return (
+            <div>
     <form>
         <div className=" row justify-content-md-center">
           <div className='col-1'>
@@ -20,11 +39,14 @@ const Buscador = () => (
           </Button>
           </div>
           <div className='col-3'>
-          <input type="text" className="form-control" placeholder="Buscar cliente"/>
+          <input type="text" className="form-control" placeholder="Buscar cliente" onChange={this.handleInputChange} value={this.state.title} name="title"/>
           </div>
           </div>
     </form>
+      
+            </div>
 
-)
+        )
+        }
 
-export default withRouter(Buscador)
+}

@@ -69,11 +69,21 @@ export default {
   },
   getAllClients: async () => {
     try {
-      const res = await axios.get('/api/clients')
+      const res = await axios.get('/api/clients/')
       console.log(res)
       return res.data
     } catch (err) {
       return console.log(err)
     }
+  },
+getClientBySearch:async (word) => {
+  try {
+    const res = await axios.get(`/api/clients/${word}`)
+    console.log(res)
+    return res.data
+  } catch (err) {
+    return console.log(err)
   }
+}
+
 }

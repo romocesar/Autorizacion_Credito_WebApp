@@ -32,10 +32,10 @@ module.exports = {
       res.status(200).json(data)
     })
   },
-  getUserById: (req, res) => {
+  getClientBySearch: (req, res) => {
     console.log(req.isAuthenticated())
-    db.User.selectOneById(req.params.id, data => {
-      res.status(200).json(data)
+    db.Clients.getClientBySearch(req.params.word, data => {
+      res.status(200).json(data);
     })
   },
   updateUserById: (req, res) => {

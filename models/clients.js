@@ -34,6 +34,14 @@ const Clients = {
       cb(results)
     })
   },
+  getClientBySearch: (word, cb) => {
+    const queryString = `SELECT * FROM clients WHERE client_name LIKE "%${word}%"`;
+    connection.execute(queryString, [word], (err, results) => {
+      if (err) throw err
+      cb(results)
+    })
+  },
+
   selectOneByUsername: (username, cb) => {
     const queryString = 'SELECT u.user_id, u.username, u.access_id, a.type FROM users AS u INNER JOIN access_levels AS a ON u.access_id=a.access_id WHERE username=? LIMIT 1;'
     connection.execute(queryString, [username], (err, results) => {
