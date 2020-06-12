@@ -5,6 +5,7 @@ import API from './utils/API'
 import Dashboard from './pages/Dashboard'
 import ManagerDashboard from './pages/ManagerDashboard'
 import AdminDashboard from './pages/AdminDashboard'
+import AutCreditoApp from './pages/AutCreditoApp'
 import Login from './pages/Login'
 import About from './pages/About'
 import NoMatch from './pages/NoMatch'
@@ -12,6 +13,7 @@ import TopNavbar from './components/TopNavbar' // WrappedWithRouter
 import UserContext from './UserContext'
 /* eslint-disable no-console */
 import PrivateAccessRoute from './components/PrivateAccessRoute'
+
 
 class App extends React.Component {
   constructor (props) {
@@ -77,6 +79,7 @@ class App extends React.Component {
                     <PrivateAccessRoute strict exact path='/about' component={About} aId={1} />
                     <PrivateAccessRoute strict exact path='/manager' component={ManagerDashboard} aId={2} />
                     <PrivateAccessRoute strict exact path='/admin' component={AdminDashboard} aId={3} />
+                    {/*<PrivateAccessRoute strict exact path='/aut_credito_app' component={AutCreditoApp} aId={1} />*/}
                     <Route component={NoMatch} />
                   </Switch>
                 </Container>
