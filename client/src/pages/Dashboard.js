@@ -1,6 +1,7 @@
 import React from 'react'
 import RenderIfAId from '../components/RenderIfAId'
 import UserContext from '../UserContext'
+import Tarjetas from '../components/Tarjetas'
 import Buscador from '../components/Buscador'
 import ViewAllUsers from '../components/ViewAllUsers';
 import ViewAllClients from '../components/ViewAllClients';
@@ -15,14 +16,12 @@ export default class Dashboard extends React.Component {
   
       <UserContext.Consumer>
         {({ user }) => (
-          <div className='text-center'>
-            <h1 className='display-5' style={{margin: '2rem'}}>Welcome {user.username}</h1>
-            <Buscador></Buscador>
-            <ViewAllClients/>
+          <div className='text-center' >    
+            <Tarjetas />        
+            {/*<Buscador ></Buscador>*/}
+            {/*<ViewAllClients/>*/}
           </div>
-
         )}
-
       </UserContext.Consumer>
     )
   }

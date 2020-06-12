@@ -15,10 +15,10 @@ const TopNavbar = () => (
       <Navbar expand='md' bg='dark' variant='dark'>
         <Navbar.Toggle aria-controls='responsive-top-navbar' />
         <Navbar.Collapse id='responsive-top-navbar'>
-          <Navbar.Brand>Autorizacion de créditos</Navbar.Brand>
+          <Navbar.Brand>Agroveterinaria de Sonora | Herramientas</Navbar.Brand>
           <Nav>
             <NavLink exact to='/' className='nav-link' activeClassName='active'>
-              Dashboard
+              Aplicaciones
             </NavLink>
             <RenderIfAId aId={2}>
               <NavLink exact to='/manager' className='nav-link' activeClassName='active'>
@@ -31,7 +31,7 @@ const TopNavbar = () => (
               </NavLink>
             </RenderIfAId>
             <NavLink exact to='/about' className='nav-link' activeClassName='active'>
-              About
+              Acerca de
             </NavLink>
           </Nav>
         </Navbar.Collapse>
@@ -40,7 +40,7 @@ const TopNavbar = () => (
             {user.username} <Badge pill variant='light' className='p-1'>{user.type}</Badge>
           </Button>
           <Button type='submit' onClick={e => getUserLogout(e)} variant='danger'>
-            Log-out
+            Cerrar Sesión
           </Button>
         </ButtonGroup>
       </Navbar>
