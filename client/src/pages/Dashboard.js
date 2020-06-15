@@ -17,8 +17,7 @@ export default class Dashboard extends React.Component {
       <UserContext.Consumer>
         {({ user }) => (
           <div className='text-center' >    
-            <Tarjetas />       
-            {/*<Buscador ></Buscador>*/}
+            {<Buscador ></Buscador>}
             {/*<ViewAllClients/>*/}
           </div>
         )}
