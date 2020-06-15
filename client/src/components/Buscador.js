@@ -73,7 +73,7 @@ export default class Buscador2 extends React.Component {
                         <tr key={client.id}>
                           <td>{client.client_name}</td>
                           <td>{client.second_name}</td>
-                          <td><button ></button>{client.estatus}</td>
+                          <td><button onClick={`/${client.client_name}`}>Ver</button></td>
                         </tr>
                       )): ''}
                     
