@@ -7,7 +7,7 @@ import ViewAllUsers from '../components/ViewAllUsers';
 import ViewAllClients from '../components/ViewAllClients';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-
+import Details from '../components/Detail';
 export default class Dashboard extends React.Component {
 
   render () {
@@ -19,6 +19,7 @@ export default class Dashboard extends React.Component {
           <div className='text-center' >    
             {<Buscador ></Buscador>}
             {/*<ViewAllClients/>*/}
+            <Details></Details>
           </div>
         )}
       </UserContext.Consumer>
