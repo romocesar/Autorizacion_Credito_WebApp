@@ -29,9 +29,9 @@ export default class Detail extends React.Component {
       const { name, value } = event.target
       this.setState({ [name]: value })
     }
-    this.componentWillMount = ()=> {
-      API.getClientById('1').then((res) => this.setState({info: res}));
-    }
+    // this.componentWillMount = ()=> {
+    //   API.getClientById('1').then((res) => this.setState({info: res}));
+    // }
 
     this.handleSubmit = event => {
       event.preventDefault()
@@ -49,19 +49,23 @@ export default class Detail extends React.Component {
       <Form  onSubmit={e => this.handleSubmit(e)} className='text-center border p-3'>
             <Form.Row className='justify-content-center'>
               <Form.Group controlId='loginUsername'>
-        <Form.Label>Estatus</Form.Label>
-                <Form.Control size='lg' onChange={this.handleInputChange} autoComplete='username' type='text' name='username' />
+              <Form.Label>Estatus</Form.Label>                
+                <Form.Control size='lg' onChange={this.handleInputChange} type='text' name='estatus' as="select" defaultValue="Bloqueado">
+                  <option>Bloqueado</option>
+                  <option>Libre</option>
+                  <option>Automático</option>
+                </Form.Control>
               </Form.Group>
             </Form.Row>
             <Form.Row className='justify-content-center'>
               <Form.Group controlId='loginPassword'>
-                <Form.Label>Días bloqueo</Form.Label>
+                <Form.Label>Días de Bloqueo</Form.Label>
                 <Form.Control size='lg' onChange={this.handleInputChange}   />
               </Form.Group>
             </Form.Row>
             <Form.Row className='justify-content-center'>
               <Form.Group controlId='Fecha negociación'>
-                <Form.Label>Fecha de negociación</Form.Label>
+                <Form.Label>Fecha de Negociación</Form.Label>
                 <Form.Control size='lg' onChange={this.handleInputChange}   />
               </Form.Group>
             </Form.Row>
@@ -72,7 +76,7 @@ export default class Detail extends React.Component {
               </Form.Group>
             </Form.Row>
             <Button  className='w-25 mx-auto mb-2' type='submit' size='block' variant='success'>
-              Login
+              Guardar Cambios
             </Button>
           </Form>
               </Row>

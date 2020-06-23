@@ -1,6 +1,8 @@
 import React from 'react'
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
+import Container from 'react-bootstrap/Container'
+import Image from 'react-bootstrap/Image'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import UserContext from '../UserContext'
@@ -33,30 +35,30 @@ class Login extends React.Component {
 
   render () {
     return (
+    <Container>
       <Row className='justify-content-center'>
         <Col xs='10'>
-          <img style={{ display: 'block',margin:'auto',height:'10rem'}}
+          <img style={{ display: 'block', margin: 'auto', marginTop:'3rem', marginBottom:'3rem', height:'8rem'}}
           src='https://drive.google.com/uc?export=view&id=1P_32JglBGkWho8Z1EpjkY6Tdgj_71Omf'></img>
-          <h1 className='text-center text-capitalize'>Bienvenido {this.state.username ? this.state.username : 'User'}</h1>
-          <Form disabled={!this.isValidInput()} onSubmit={e => this.handleSubmit(e)} className='text-center border p-3'>
+          
+          <Form disabled={!this.isValidInput()} onSubmit={e => this.handleSubmit(e)} className='text-center'>
             <Form.Row className='justify-content-center'>
-              <Form.Group controlId='loginUsername'>
-                <Form.Label>Username</Form.Label>
-                <Form.Control size='lg' onChange={this.handleInputChange} autoComplete='username' type='text' name='username' placeholder='Username' />
+              <Form.Group controlId='loginUsername'>                
+                <Form.Control size='lg' onChange={this.handleInputChange} autoComplete='username' type='text' name='username' placeholder='Usuario' />
               </Form.Group>
             </Form.Row>
             <Form.Row className='justify-content-center'>
-              <Form.Group controlId='loginPassword'>
-                <Form.Label>Password</Form.Label>
-                <Form.Control size='lg' onChange={this.handleInputChange} autoComplete='current-password' type='password' name='password' placeholder='Password' />
+              <Form.Group controlId='loginPassword'>                
+                <Form.Control size='lg' onChange={this.handleInputChange} autoComplete='current-password' type='password' name='password' placeholder='Contraseña' />
               </Form.Group>
             </Form.Row>
-            <Button disabled={!this.isValidInput()} className='w-25 mx-auto mb-2' type='submit' size='block' variant='success'>
-              Login
+            <Button style={{width: '8rem', display: 'block',  marginTop:'3rem', fontSize: '1rem'}} disabled={!this.isValidInput()} className='mx-auto mb-2' type='submit' size='lg' variant='primary'>
+              Siguiente
             </Button>
           </Form>
         </Col>
-      </Row>
+      </Row>      
+    </Container>      
     )
   }
 }
