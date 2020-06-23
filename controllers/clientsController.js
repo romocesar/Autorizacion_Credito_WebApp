@@ -62,5 +62,11 @@ module.exports = {
     db.User.deleteOne(req.params.id, data => {
       res.status(200).json(data)
     })
+  },
+  getClientById: (req, res) => {
+    console.log(req.isAuthenticated())
+    db.Clients.getClientById(req.params.word, data => {
+      res.status(200).json(data);
+    })
   }
 }

@@ -84,6 +84,15 @@ getClientBySearch:async (word) => {
   } catch (err) {
     return console.log(err)
   }
+},
+getClientById:async (id) => {
+  try {
+    const res = await axios.get(`/api/clients/${id}`)
+    console.log(res)
+    return res.data
+  } catch (err) {
+    return console.log(err)
+  }
 }
 
 }

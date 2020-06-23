@@ -18,13 +18,11 @@ const Clients = {
       return done(null, user[0])
     })
   },
-  getUserById: (id, done) => {
-    const queryString = 'SELECT u.user_id, u.username, u.access_id, a.type FROM users AS u INNER JOIN access_levels AS a ON u.access_id=a.access_id WHERE user_id=? LIMIT 1;'
-    connection.execute(queryString, [id], (err, user) => {
-      if (err) {
-        return done(err, user)
-      }
-      return done(null, user[0])
+  getClientById: (id, cb) => {
+    const queryString = 'SELECT * FROM clients WHERE id=?';
+    connection.execute(queryString, [id], (err, results) => {
+      if (err) throw err
+      cb(results)
     })
   },
   selectOneById: (id, cb) => {
