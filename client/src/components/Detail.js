@@ -29,9 +29,9 @@ export default class Detail extends React.Component {
       const { name, value } = event.target
       this.setState({ [name]: value })
     }
-    // this.componentWillMount = ()=> {
-    //   API.getClientById('1').then((res) => this.setState({info: res}));
-    // }
+    this.componentWillMount = ()=> {
+      API.getClientById('1').then((res) => this.setState({info: res[0]}));
+   }
 
     this.handleSubmit = event => {
       event.preventDefault()
@@ -44,7 +44,7 @@ export default class Detail extends React.Component {
       render(){
         return (
             <div style={({ paddingTop: '3rem' })}>
-              <h1>{console.log('HI THERE') }{this.state.info}</h1>
+              <h1>{console.log('HI THERE')} {console.log(this.state.info.id)}</h1>
       <Row className="justify-content-center">     
       <Form  onSubmit={e => this.handleSubmit(e)} className='text-center border p-3'>
             <Form.Row className='justify-content-center'>

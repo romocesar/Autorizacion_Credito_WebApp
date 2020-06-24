@@ -9,7 +9,7 @@ export default class ViewAllClients extends React.Component {
     clients:[]
   }
   componentDidMount(){
-    API.getClientBySearch('').then((res) => this.setState({ clients: res}));
+    API.getClientBySearch().then((res) => this.setState({ clients: res}));
   }
   render(){
     return (

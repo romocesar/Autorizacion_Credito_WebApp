@@ -15,7 +15,7 @@ import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 import Col from 'react-bootstrap/Col'
 
-export default class Buscador2 extends React.Component {
+export default class Buscador extends React.Component {
   constructor (props) {
     super(props)
     this.handleInputChange = event => {
@@ -25,28 +25,29 @@ export default class Buscador2 extends React.Component {
     this.handleSubmit = event => {
       event.preventDefault()
       API.getClientBySearch(this.state.search ? this.state.search : '').then((res) => this.setState({ clients: res}));
+    
     }
 
     this.state = {
       search: '',
       password: '',
-      title : ''
+      title : '',
+      clients: ''
     }
   }
 
 
-
       render(){
+
         return (
             <div style={({ paddingTop: '3rem' })}>
     <Row className='justify-content-center'>
         <Col xs='10'>
-
           <Form onSubmit={e => this.handleSubmit(e)} className='text-center border p-3'>
             <Form.Row className='justify-content-center'>
               <Form.Group controlId='loginPassword'>
                 <Form.Label>Buscar Cliente</Form.Label>
-                <Form.Control size='lg' onChange={this.handleInputChange} autoComplete='current-password' name='search' placeholder='Buscar' />
+                <Form.Control size='lg' onChange={this.handleInputChange} name='search' placeholder='Buscar' />
               </Form.Group>
             </Form.Row>
             <Button className='w-25 mx-auto mb-2' type='submit' size='block' variant='success'>
